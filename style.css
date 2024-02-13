@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Title Screen  */
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#titlePage {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+
+  transition: opacity 0.5s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+#titleText {
+  width: 50vw;
+  display: block;
+  margin-left: 68px;
+}
+
+#StartButton {
+  width: 12vw;
+  margin: 32px 330px;
+}
+
+#score {
+  position: absolute;
+  top: 0%;
+  left: 2%;
+
+  font-size: 30px;
+
+  color: rgb(184, 62, 46);
+}
+
+#bird {
+  height: 0px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transition: height ease-out 2s;
+}
+
+.showBird {
+  height: 7vh !important;
+}
+
+.pipe {
+  width: 6vw;
+
+  object-fit: cover;
+  object-position: top;
+
+  position: absolute;
+
+  animation: pipeAnimation 5s linear 0s 1 normal forwards;
+}
+
+@keyframes pipeAnimation {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.pipeDown {
+  bottom: 8%;
+}
+.pipeTop {
+  top: 0%;
+  transform: rotate(180deg);
+}
+
+#gameOver {
+  visibility: hidden;
+}
+
+#gameOver > img {
+  width: 700px;
+}
